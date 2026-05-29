@@ -17,8 +17,11 @@ jobs:
 
       - uses: astral-sh/setup-uv@v6
 
+      - name: Install Flet
+        run: uv pip install flet --system
+
       - name: Build APK
-        run: uv run flet build apk --project "Controle Financas" --org "com.github.tshonorio" --build-version "1.0.0" --yes --verbose
+        run: flet build apk --project "Controle Financas" --org "com.github.tshonorio" --build-version "1.0.0" --yes --verbose
 
       - uses: actions/upload-artifact@v6
         with:
