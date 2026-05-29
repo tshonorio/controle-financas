@@ -9,9 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@v6
 
-      - uses: actions/setup-java@v4.7.0
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: 17
@@ -21,9 +21,9 @@ jobs:
           channel: stable
           flutter-version: 3.27.x
 
-      - uses: actions/setup-python@v5.6.0
+      - uses: actions/setup-python@v6
         with:
-          python-version: 3.11
+          python-version: '3.11'
 
       - name: Install Flet
         run: pip install flet
@@ -31,7 +31,7 @@ jobs:
       - name: Build APK
         run: flet build apk --project "Controle Financas" --org "com.github.tshonorio" --build-version "1.0.0"
 
-      - uses: actions/upload-artifact@v4.6.2
+      - uses: actions/upload-artifact@v6
         with:
           name: controle-financas-apk
           path: build/apk/
