@@ -3,7 +3,7 @@ name: Build APK
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   build:
@@ -29,7 +29,7 @@ jobs:
         run: pip install flet
 
       - name: Build APK
-        run: flet build apk --project "Controle Financas" --org "com.seudominio" --build-version "1.0.0"
+        run: flet build apk --project "Controle Financas" --org "com.github.tshonorio" --build-version "1.0.0"
 
       - uses: actions/upload-artifact@v4.6.2
         with:
