@@ -122,7 +122,7 @@ class RendaView(ft.Column):
                 spacing=6,
             ),
             on_click=lambda _: self._var_date_picker.pick_date(),
-            bgcolor=ft.colors.SURFACE_VARIANT,
+            bgcolor=ft.Colors.SURFACE_VARIANT,
             padding=12,
             border_radius=10,
         )
@@ -281,13 +281,13 @@ class RendaView(ft.Column):
         # --- Layout final ---
         self.controls = [
             ft.Text("Minhas Rendas", size=18, weight=ft.FontWeight.BOLD),
-            ft.Divider(height=6, color=ft.colors.TRANSPARENT),
+            ft.Divider(height=6, color=ft.Colors.TRANSPARENT),
             resumo,
-            ft.Divider(height=10, color=ft.colors.TRANSPARENT),
+            ft.Divider(height=10, color=ft.Colors.TRANSPARENT),
             fixa_card,
-            ft.Divider(height=10, color=ft.colors.TRANSPARENT),
+            ft.Divider(height=10, color=ft.Colors.TRANSPARENT),
             var_card,
-            ft.Divider(height=10, color=ft.colors.TRANSPARENT),
+            ft.Divider(height=10, color=ft.Colors.TRANSPARENT),
             ft.Text("Histórico de Rendas Variáveis", size=14, weight=ft.FontWeight.BOLD, color=Colors.GREY_400),
             ft.Column(var_items, spacing=6),
         ]

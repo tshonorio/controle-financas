@@ -175,9 +175,9 @@ class LanctosView(ft.Column):
                 padding=8,
                 border_radius=12,
                 bgcolor=(
-                    Colors.with_opacity(0.4, ft.colors.SURFACE_VARIANT)
+                    Colors.with_opacity(0.4, ft.Colors.SURFACE_VARIANT)
                     if is_paid
-                    else ft.colors.SURFACE_VARIANT
+                    else ft.Colors.SURFACE_VARIANT
                 ),
                 border=ft.border.all(border_width, border_color),
                 opacity=opacity_override if opacity_override is not None else (0.6 if is_paid else 1.0),
@@ -314,7 +314,7 @@ class LanctosView(ft.Column):
         self.controls = [
             header,
             hint,
-            ft.Divider(height=4, color=ft.colors.TRANSPARENT),
+            ft.Divider(height=4, color=ft.Colors.TRANSPARENT),
             list_container,
         ]
         self.spacing = 8
@@ -527,7 +527,7 @@ class LanctosView(ft.Column):
                         size=13,
                         color=Colors.GREY_400,
                     ),
-                    ft.Divider(height=8, color=ft.colors.TRANSPARENT),
+                    ft.Divider(height=8, color=ft.Colors.TRANSPARENT),
                     radio_group,
                 ],
                 spacing=8,
@@ -664,7 +664,7 @@ class LanctosView(ft.Column):
             content=ft.Column(
                 [
                     ft.Text(descricao, size=13, color=Colors.GREY_400, weight=ft.FontWeight.BOLD),
-                    ft.Divider(height=6, color=ft.colors.TRANSPARENT),
+                    ft.Divider(height=6, color=ft.Colors.TRANSPARENT),
                     valor_field,
                     ft.Container(
                         content=ft.Row(
@@ -675,7 +675,7 @@ class LanctosView(ft.Column):
                             alignment=ft.MainAxisAlignment.CENTER,
                         ),
                         on_click=pick_date,
-                        bgcolor=ft.colors.SURFACE_VARIANT,
+                        bgcolor=ft.Colors.SURFACE_VARIANT,
                         padding=12,
                         border_radius=10,
                     ),

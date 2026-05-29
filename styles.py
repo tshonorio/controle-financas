@@ -13,69 +13,69 @@ import flet as ft
 class Colors:
     """Constantes de cores do aplicativo — paleta Instagram."""
 
-    SURFACE: str = ft.colors.SURFACE
-    SURFACE_VARIANT: str = ft.colors.SURFACE_VARIANT
+    SURFACE: str = ft.Colors.SURFACE
+    SURFACE_VARIANT: str = ft.Colors.SURFACE_VARIANT
 
-    ACCENT: str = ft.colors.PINK
-    ACCENT_600: str = ft.colors.PINK_600
-    ACCENT_300: str = ft.colors.PINK_300
-    ACCENT_200: str = ft.colors.PINK_200
+    ACCENT: str = ft.Colors.PINK
+    ACCENT_600: str = ft.Colors.PINK_600
+    ACCENT_300: str = ft.Colors.PINK_300
+    ACCENT_200: str = ft.Colors.PINK_200
 
     GRADIENT_BRAND = ft.LinearGradient(
         begin=ft.alignment.top_left,
         end=ft.alignment.bottom_right,
-        colors=[ft.colors.PINK_500, ft.colors.PURPLE_500, ft.colors.DEEP_PURPLE_500],
+        colors=[ft.Colors.PINK_500, ft.Colors.PURPLE_500, ft.Colors.DEEP_PURPLE_500],
     )
 
     GRADIENT_GOLD = ft.LinearGradient(
         begin=ft.alignment.top_left,
         end=ft.alignment.bottom_right,
-        colors=[ft.colors.AMBER_400, ft.colors.ORANGE_500],
+        colors=[ft.Colors.AMBER_400, ft.Colors.ORANGE_500],
     )
 
     GRADIENT_GREEN = ft.LinearGradient(
         begin=ft.alignment.top_left,
         end=ft.alignment.bottom_right,
-        colors=[ft.colors.GREEN_500, ft.colors.TEAL_500],
+        colors=[ft.Colors.GREEN_500, ft.Colors.TEAL_500],
     )
 
-    GREEN: str = ft.colors.GREEN
-    GREEN_400: str = ft.colors.GREEN_400
-    GREEN_700: str = ft.colors.GREEN_700
+    GREEN: str = ft.Colors.GREEN
+    GREEN_400: str = ft.Colors.GREEN_400
+    GREEN_700: str = ft.Colors.GREEN_700
 
-    AMBER: str = ft.colors.AMBER
-    CYAN: str = ft.colors.CYAN
-    LIGHT_BLUE: str = ft.colors.LIGHT_BLUE
-    ORANGE: str = ft.colors.ORANGE
+    AMBER: str = ft.Colors.AMBER
+    CYAN: str = ft.Colors.CYAN
+    LIGHT_BLUE: str = ft.Colors.LIGHT_BLUE
+    ORANGE: str = ft.Colors.ORANGE
 
-    RED: str = ft.colors.RED
-    RED_300: str = ft.colors.RED_300
-    RED_700: str = ft.colors.RED_700
+    RED: str = ft.Colors.RED
+    RED_300: str = ft.Colors.RED_300
+    RED_700: str = ft.Colors.RED_700
 
-    GREY_400: str = ft.colors.GREY_400
-    GREY_500: str = ft.colors.GREY_500
-    GREY_600: str = ft.colors.GREY_600
-    GREY_700: str = ft.colors.GREY_700
+    GREY_400: str = ft.Colors.GREY_400
+    GREY_500: str = ft.Colors.GREY_500
+    GREY_600: str = ft.Colors.GREY_600
+    GREY_700: str = ft.Colors.GREY_700
 
-    WHITE: str = ft.colors.WHITE
-    WHITE_10: str = ft.colors.WHITE10
+    WHITE: str = ft.Colors.WHITE
+    WHITE_10: str = ft.Colors.WHITE10
 
     @staticmethod
     def with_opacity(opacity: float, color: str) -> str:
-        return ft.colors.with_opacity(opacity, color)
+        return ft.Colors.with_opacity(opacity, color)
 
 
 # ---------------------------------------------------------------------------
 # Categorias
 # ---------------------------------------------------------------------------
 CATEGORIAS: list[dict[str, str]] = [
-    {"nome": "Alimentação", "cor": ft.colors.GREEN, "icon": ft.icons.RESTAURANT},
-    {"nome": "Transporte", "cor": ft.colors.BLUE, "icon": ft.icons.DIRECTIONS_CAR},
-    {"nome": "Lazer", "cor": ft.colors.PURPLE, "icon": ft.icons.GAMEPAD},
-    {"nome": "Casa/Moradia", "cor": ft.colors.AMBER, "icon": ft.icons.HOME},
-    {"nome": "Saúde", "cor": ft.colors.RED, "icon": ft.icons.FAVORITE},
-    {"nome": "Educação", "cor": ft.colors.CYAN, "icon": ft.icons.SCHOOL},
-    {"nome": "Outros", "cor": ft.colors.GREY, "icon": ft.icons.CREDIT_CARD},
+    {"nome": "Alimentação", "cor": ft.Colors.GREEN, "icon": ft.icons.RESTAURANT},
+    {"nome": "Transporte", "cor": ft.Colors.BLUE, "icon": ft.icons.DIRECTIONS_CAR},
+    {"nome": "Lazer", "cor": ft.Colors.PURPLE, "icon": ft.icons.GAMEPAD},
+    {"nome": "Casa/Moradia", "cor": ft.Colors.AMBER, "icon": ft.icons.HOME},
+    {"nome": "Saúde", "cor": ft.Colors.RED, "icon": ft.icons.FAVORITE},
+    {"nome": "Educação", "cor": ft.Colors.CYAN, "icon": ft.icons.SCHOOL},
+    {"nome": "Outros", "cor": ft.Colors.GREY, "icon": ft.icons.CREDIT_CARD},
 ]
 
 
@@ -84,7 +84,7 @@ def get_categoria_info(nome: str) -> dict[str, str]:
     for cat in CATEGORIAS:
         if cat["nome"].lower() == nome.lower():
             return cat
-    return {"nome": nome, "cor": ft.colors.GREY, "icon": ft.icons.CREDIT_CARD}
+    return {"nome": nome, "cor": ft.Colors.GREY, "icon": ft.icons.CREDIT_CARD}
 
 
 # ---------------------------------------------------------------------------
@@ -128,13 +128,13 @@ def parse_br_money(text: str) -> float:
 # Botões reutilizáveis
 # ---------------------------------------------------------------------------
 BTN_PRIMARY = ft.ButtonStyle(
-    color=ft.colors.WHITE,
-    bgcolor=ft.colors.PINK_600,
+    color=ft.Colors.WHITE,
+    bgcolor=ft.Colors.PINK_600,
     shape=ft.RoundedRectangleBorder(radius=10),
 )
 
 BTN_SUCCESS = ft.ButtonStyle(
-    color=ft.colors.WHITE,
-    bgcolor=ft.colors.GREEN_700,
+    color=ft.Colors.WHITE,
+    bgcolor=ft.Colors.GREEN_700,
     shape=ft.RoundedRectangleBorder(radius=10),
 )

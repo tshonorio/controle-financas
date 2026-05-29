@@ -97,7 +97,7 @@ class LancamentoView(ft.Column):
                 alignment=ft.MainAxisAlignment.CENTER,
             ),
             on_click=lambda _: self._date_picker.pick_date(),
-            bgcolor=ft.colors.SURFACE_VARIANT,
+            bgcolor=ft.Colors.SURFACE_VARIANT,
             padding=12,
             border_radius=10,
         )
@@ -157,7 +157,7 @@ class LancamentoView(ft.Column):
                 alignment=ft.MainAxisAlignment.CENTER,
             ),
             on_click=lambda _: self._venc_picker.pick_date(),
-            bgcolor=ft.colors.SURFACE_VARIANT,
+            bgcolor=ft.Colors.SURFACE_VARIANT,
             padding=12,
             border_radius=10,
         )
@@ -166,13 +166,13 @@ class LancamentoView(ft.Column):
             "Valor de cada parcela: R$ 0,00",
             size=13,
             weight=ft.FontWeight.W_500,
-            color=ft.colors.INDIGO_200,
+            color=ft.Colors.INDIGO_200,
         )
         self._preview_container = ft.Container(
             content=self._preview_text,
-            bgcolor=ft.colors.with_opacity(0.1, ft.colors.INDIGO),
+            bgcolor=ft.Colors.with_opacity(0.1, ft.Colors.INDIGO),
             border=ft.border.all(
-                1, ft.colors.with_opacity(0.3, ft.colors.INDIGO)
+                1, ft.Colors.with_opacity(0.3, ft.Colors.INDIGO)
             ),
             border_radius=10,
             padding=12,
@@ -189,7 +189,7 @@ class LancamentoView(ft.Column):
                                 ft.Text(
                                     "Nº Parcelas",
                                     size=12,
-                                    color=ft.colors.GREY_400,
+                                    color=ft.Colors.GREY_400,
                                 ),
                                 self._num_parcelas,
                             ],
@@ -200,7 +200,7 @@ class LancamentoView(ft.Column):
                                 ft.Text(
                                     "1º Vencimento",
                                     size=12,
-                                    color=ft.colors.GREY_400,
+                                    color=ft.Colors.GREY_400,
                                 ),
                                 venc_btn,
                             ],
@@ -236,7 +236,7 @@ class LancamentoView(ft.Column):
         # --- Layout final ---
         self.controls = [
             ft.Text("Custo Variável", size=18, weight=ft.FontWeight.BOLD),
-            ft.Divider(height=5, color=ft.colors.TRANSPARENT),
+            ft.Divider(height=5, color=ft.Colors.TRANSPARENT),
             self._descricao,
             self._local,
             self._valor_display,
@@ -247,7 +247,7 @@ class LancamentoView(ft.Column):
                             ft.Text(
                                 "Data da Compra",
                                 size=12,
-                                color=ft.colors.GREY_400,
+                                color=ft.Colors.GREY_400,
                             ),
                             date_btn,
                         ],
@@ -258,7 +258,7 @@ class LancamentoView(ft.Column):
                             ft.Text(
                                 "Pagamento",
                                 size=12,
-                                color=ft.colors.GREY_400,
+                                color=ft.Colors.GREY_400,
                             ),
                             self._metodo,
                         ],
@@ -270,7 +270,7 @@ class LancamentoView(ft.Column):
             self._categoria,
             self._parcelamento_section,
             self._observacao,
-            ft.Divider(height=10, color=ft.colors.TRANSPARENT),
+            ft.Divider(height=10, color=ft.Colors.TRANSPARENT),
             save_btn,
         ]
         self.spacing = 14

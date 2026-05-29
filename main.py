@@ -38,27 +38,27 @@ def main(page: ft.Page) -> None:
     page.window_height = 844
     page.window_resizable = True
     page.theme = ft.Theme(
-        color_scheme_seed=ft.colors.PINK,
+        color_scheme_seed=ft.Colors.PINK,
         card_theme=ft.CardTheme(
-            color=ft.colors.WHITE,
+            color=ft.Colors.WHITE,
             elevation=0,
             shape=ft.RoundedRectangleBorder(radius=14),
             margin=0,
         ),
         navigation_bar_theme=ft.NavigationBarTheme(
-            indicator_color=ft.colors.PINK_200,
+            indicator_color=ft.Colors.PINK_200,
         ),
     )
     page.dark_theme = ft.Theme(
-        color_scheme_seed=ft.colors.PINK,
+        color_scheme_seed=ft.Colors.PINK,
         card_theme=ft.CardTheme(
-            color=ft.colors.with_opacity(0.06, ft.colors.WHITE),
+            color=ft.Colors.with_opacity(0.06, ft.Colors.WHITE),
             elevation=0,
             shape=ft.RoundedRectangleBorder(radius=14),
             margin=0,
         ),
         navigation_bar_theme=ft.NavigationBarTheme(
-            indicator_color=ft.colors.PINK_400,
+            indicator_color=ft.Colors.PINK_400,
         ),
     )
 
@@ -83,7 +83,7 @@ def main(page: ft.Page) -> None:
     theme_btn = ft.IconButton(
         icon=ft.icons.DARK_MODE,
         selected_icon=ft.icons.LIGHT_MODE,
-        icon_color=ft.colors.PINK_300,
+        icon_color=ft.Colors.PINK_300,
         on_click=_toggle_theme,
         tooltip="Alternar tema",
     )
@@ -98,7 +98,7 @@ def main(page: ft.Page) -> None:
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
         ),
         padding=ft.padding.symmetric(horizontal=16, vertical=8),
-        border=ft.border.only(bottom=ft.BorderSide(0.5, ft.colors.with_opacity(0.1, ft.colors.WHITE))),
+        border=ft.border.only(bottom=ft.BorderSide(0.5, ft.Colors.with_opacity(0.1, ft.Colors.WHITE))),
     )
 
     # --- Notificações ---
@@ -106,8 +106,8 @@ def main(page: ft.Page) -> None:
         """Exibe um snackbar de notificação."""
         page.overlay.append(
             ft.SnackBar(
-                content=ft.Text(text, color=ft.colors.WHITE),
-                bgcolor=ft.colors.RED_700 if is_error else ft.colors.GREEN_700,
+                content=ft.Text(text, color=ft.Colors.WHITE),
+                bgcolor=ft.Colors.RED_700 if is_error else ft.Colors.GREEN_700,
                 open=True,
             )
         )
@@ -182,9 +182,9 @@ def main(page: ft.Page) -> None:
                 selected_icon=ft.icons.DASHBOARD_ROUNDED,
             ),
         ],
-        bgcolor=ft.colors.SURFACE,
+        bgcolor=ft.Colors.SURFACE,
         elevation=10,
-        indicator_color=ft.colors.PINK_200,
+        indicator_color=ft.Colors.PINK_200,
     )
 
     # --- Renderização inicial ---

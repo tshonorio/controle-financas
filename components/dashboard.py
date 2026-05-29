@@ -124,14 +124,14 @@ class DashboardView(ft.Column):
             gradient=ft.LinearGradient(
                 begin=ft.alignment.center_left,
                 end=ft.alignment.center_right,
-                colors=[ft.colors.PINK_800, ft.colors.PURPLE_800],
+                colors=[ft.Colors.PINK_800, ft.Colors.PURPLE_800],
             ),
         )
 
         # --- Cards de resumo ---
         self._card_total = _SummaryCard(ft.icons.ATTACH_MONEY, "Custo Total", Colors.WHITE)
-        self._card_fixo = _SummaryCard(ft.icons.REPEAT, "C. Fixos", ft.colors.PINK_400)
-        self._card_var = _SummaryCard(ft.icons.SHOPPING_CART, "C. Variáveis", ft.colors.PURPLE_400)
+        self._card_fixo = _SummaryCard(ft.icons.REPEAT, "C. Fixos", ft.Colors.PINK_400)
+        self._card_var = _SummaryCard(ft.icons.SHOPPING_CART, "C. Variáveis", ft.Colors.PURPLE_400)
 
         cards_row = ft.Row(
             [self._card_total, self._card_fixo, self._card_var],

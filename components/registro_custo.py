@@ -63,7 +63,7 @@ class RegistroCustoView(ft.Column):
             content=ft.Text("Variável", size=14, weight=ft.FontWeight.BOLD, text_align=ft.TextAlign.CENTER),
             padding=ft.padding.symmetric(vertical=10),
             border_radius=ft.border_radius.only(top_right=10, bottom_right=10),
-            bgcolor=ft.colors.PINK_600,
+            bgcolor=ft.Colors.PINK_600,
             expand=True,
             on_click=lambda _: self._set_tipo("variavel"),
         )
@@ -115,7 +115,7 @@ class RegistroCustoView(ft.Column):
                 alignment=ft.MainAxisAlignment.CENTER,
             ),
             on_click=lambda _: self._date_picker.pick_date(),
-            bgcolor=ft.colors.SURFACE_VARIANT,
+            bgcolor=ft.Colors.SURFACE_VARIANT,
             padding=12,
             border_radius=10,
         )
@@ -164,18 +164,18 @@ class RegistroCustoView(ft.Column):
                 alignment=ft.MainAxisAlignment.CENTER,
             ),
             on_click=lambda _: self._venc_picker.pick_date(),
-            bgcolor=ft.colors.SURFACE_VARIANT,
+            bgcolor=ft.Colors.SURFACE_VARIANT,
             padding=12,
             border_radius=10,
         )
         self._preview_text = ft.Text(
             "Valor de cada parcela: R$ 0,00",
-            size=13, weight=ft.FontWeight.W_500, color=ft.colors.INDIGO_200,
+            size=13, weight=ft.FontWeight.W_500, color=ft.Colors.INDIGO_200,
         )
         self._preview_container = ft.Container(
             content=self._preview_text,
-            bgcolor=ft.colors.with_opacity(0.1, ft.colors.INDIGO),
-            border=ft.border.all(1, ft.colors.with_opacity(0.3, ft.colors.INDIGO)),
+            bgcolor=ft.Colors.with_opacity(0.1, ft.Colors.INDIGO),
+            border=ft.border.all(1, ft.Colors.with_opacity(0.3, ft.Colors.INDIGO)),
             border_radius=10, padding=12, alignment=ft.alignment.center,
             visible=False,
         )
@@ -183,8 +183,8 @@ class RegistroCustoView(ft.Column):
             [
                 ft.Row(
                     [
-                        ft.Column([ft.Text("Nº Parcelas", size=12, color=ft.colors.GREY_400), self._num_parcelas], expand=1),
-                        ft.Column([ft.Text("1º Vencimento", size=12, color=ft.colors.GREY_400), self._venc_btn], expand=2),
+                        ft.Column([ft.Text("Nº Parcelas", size=12, color=ft.Colors.GREY_400), self._num_parcelas], expand=1),
+                        ft.Column([ft.Text("1º Vencimento", size=12, color=ft.Colors.GREY_400), self._venc_btn], expand=2),
                     ],
                     spacing=10,
                 ),
@@ -205,21 +205,21 @@ class RegistroCustoView(ft.Column):
         # --- Layout final ---
         self.controls = [
             ft.Text("Registro de Custo", size=18, weight=ft.FontWeight.BOLD),
-            ft.Divider(height=5, color=ft.colors.TRANSPARENT),
+            ft.Divider(height=5, color=ft.Colors.TRANSPARENT),
             ft.Container(
                 content=ft.Row([self._btn_fixo, self._btn_variavel], spacing=0),
                 border=ft.border.all(1, Colors.WHITE_10),
                 border_radius=10,
                 clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
             ),
-            ft.Divider(height=5, color=ft.colors.TRANSPARENT),
+            ft.Divider(height=5, color=ft.Colors.TRANSPARENT),
             self._descricao,
             self._local,
             self._valor_display,
             self._dia,
             ft.Column(
                 [
-                    ft.Text("Data da Compra", size=12, color=ft.colors.GREY_400),
+                    ft.Text("Data da Compra", size=12, color=ft.Colors.GREY_400),
                     ft.Row(
                         [
                             self._date_btn,
@@ -232,7 +232,7 @@ class RegistroCustoView(ft.Column):
             ),
             self._categoria,
             self._parcelamento_section,
-            ft.Divider(height=10, color=ft.colors.TRANSPARENT),
+            ft.Divider(height=10, color=ft.Colors.TRANSPARENT),
             save_btn,
         ]
         self.spacing = 14
@@ -251,11 +251,11 @@ class RegistroCustoView(ft.Column):
     def _set_tipo(self, tipo: str) -> None:
         self._tipo = tipo
         if tipo == "fixo":
-            self._btn_fixo.bgcolor = ft.colors.PINK_600
+            self._btn_fixo.bgcolor = ft.Colors.PINK_600
             self._btn_variavel.bgcolor = Colors.with_opacity(0.1, Colors.WHITE)
         else:
             self._btn_fixo.bgcolor = Colors.with_opacity(0.1, Colors.WHITE)
-            self._btn_variavel.bgcolor = ft.colors.PINK_600
+            self._btn_variavel.bgcolor = ft.Colors.PINK_600
         self._update_fields()
         self.update()
 

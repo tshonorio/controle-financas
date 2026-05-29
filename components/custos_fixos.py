@@ -111,23 +111,23 @@ class CustosFixosView(ft.Column):
             gradient=ft.LinearGradient(
                 begin=ft.alignment.center_left,
                 end=ft.alignment.center_right,
-                colors=[ft.colors.with_opacity(0.12, ft.colors.PINK_500), ft.colors.with_opacity(0.12, ft.colors.PURPLE_500)],
+                colors=[ft.Colors.with_opacity(0.12, ft.Colors.PINK_500), ft.Colors.with_opacity(0.12, ft.Colors.PURPLE_500)],
             ),
-            border=ft.border.all(1, ft.colors.with_opacity(0.2, ft.colors.PINK_500)),
+            border=ft.border.all(1, ft.Colors.with_opacity(0.2, ft.Colors.PINK_500)),
         )
 
         self.controls = [
             ft.Text("Custos Fixos", size=18, weight=ft.FontWeight.BOLD),
             ft.Text("Cadastre contas que se repetem mensalmente.", size=13, color=Colors.GREY_400),
-            ft.Divider(height=8, color=ft.colors.TRANSPARENT),
+            ft.Divider(height=8, color=ft.Colors.TRANSPARENT),
             self._descricao,
             self._valor_display,
             self._dia,
             self._categoria,
             self._metodo,
-            ft.Divider(height=6, color=ft.colors.TRANSPARENT),
+            ft.Divider(height=6, color=ft.Colors.TRANSPARENT),
             save_btn,
-            ft.Divider(height=8, color=ft.colors.TRANSPARENT),
+            ft.Divider(height=8, color=ft.Colors.TRANSPARENT),
             info,
         ]
         self.spacing = 14
