@@ -170,3 +170,44 @@ Usada em: `registro_custo.py`, `renda.py`, `lanctos.py`
 - **Editar**: pressionar 2s sobre item → editar valor/vencimento
 - **Notificações**: definir lembretes (1, 2, 3, 5, 7 dias antes)
 - **Exportar PDF**: extrato mensal via `pdf_export.py` (fpdf2)
+
+---
+
+## Problemas de Migração Flet 0.22 → 0.85
+
+### APIs Depreciadas e Substituições
+
+| Padrão antigo | Novo padrão | Arquivos afetados |
+|---|---|---|
+| `ft.colors.*` | `ft.Colors.*` | 8 |
+| `ft.icons.*` | `ft.Icons.*` | 8 |
+| `ft.alignment.*` | `ft.Alignment.TOP_LEFT` (UPPER_CASE) | 3 |
+| `ft.border.all/only` | `ft.Border.all/only` | 2 |
+| `ft.padding.symmetric/only` | `ft.Padding.symmetric/only` | 3 |
+| `ft.border_radius.only` | `ft.BorderRadius.only` | 1 |
+| `SURFACE_VARIANT` | `SURFACE_CONTAINER_HIGHEST` | 9 |
+| `ft.app(target=main)` | `ft.run(main)` | main.py |
+| `ft.NavigationDestination` | `ft.NavigationBarDestination` | main.py |
+| `ElevatedButton(text="...")` | `ElevatedButton("...")` (posicional) | 5 |
+| `Dropdown(on_change=...)` | `Dropdown(on_select=...)` | 2 |
+| `ft.dropdown.Option` | `ft.DropdownOption` | 4 |
+
+### 🚨 PROBLEMA ATUAL: APK Mostra Tela Preta (não resolvido)
+
+**Sintoma**: APK compila e instala, mas abre com tela preta (sem crash visível).
+
+**Contexto**: Bug conhecido do Flet — issues #6022, #6169, #6135. Mesmo apps "Hello World" apresentam o problema em versões > 0.80.x.
+
+**O que já foi tentado (30/05/2026):**
+1. ✅ Removido `ft.SafeArea` do root (causava tela preta)
+2. ✅ Revertidas mudanças de responsividade (dashboard wrap/expand, metadata wrap)
+3. ✅ Adicionado `pyproject.toml` com boot screen habilitado
+4. ✅ Pin `flet==0.85.1` em vez de `>=0.85.0`
+5. ❌ APK ainda mostra tela preta (run #21)
+
+**Próximos passos a tentar:**
+1. Conectar `adb logcat` e filtrar por `com.github.tshonorio.controle_financas` para ver erro real
+2. Tentar `flet==0.80.5` (última versão antes dos relatos de tela branca)
+3. Criar um "Hello World" mínimo e buildar APK para ver se o problema é no código ou no build do Flet
+4. Verificar logs do build com `--verbose` (já está no workflow)
+5. Testar no emulador Android em vez de físico
