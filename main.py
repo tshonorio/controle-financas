@@ -186,11 +186,7 @@ def main(page: ft.Page) -> None:
     )
 
     # --- Renderização inicial ---
-    page.add(
-        ft.SafeArea(
-            content=ft.Column([top_bar, content_container], spacing=0, expand=True),
-        )
-    )
+    page.add(ft.Column([top_bar, content_container], spacing=0, expand=True))
     render_current_view()
 
 
