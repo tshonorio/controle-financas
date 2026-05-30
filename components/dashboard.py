@@ -136,8 +136,6 @@ class DashboardView(ft.Column):
         cards_row = ft.Row(
             [self._card_total, self._card_fixo, self._card_var],
             spacing=8,
-            wrap=True,
-            run_spacing=8,
         )
 
         # --- Container do gráfico (mutável) ---
@@ -195,15 +193,15 @@ class DashboardView(ft.Column):
                             sections_space=2,
                             center_space_radius=30,
                             animate=True,
-                            expand=True,
                         ),
-                        expand=1,
+                        width=100,
+                        height=100,
                         alignment=ft.Alignment.CENTER,
                     ),
                     ft.Container(width=1, height=80, bgcolor=Colors.WHITE_10),
                     ft.Container(
                         content=_build_legend(por_cat),
-                        expand=2,
+                        expand=True,
                         padding=ft.Padding.only(left=12),
                     ),
                 ],
@@ -213,7 +211,7 @@ class DashboardView(ft.Column):
             border=ft.Border.all(1, Colors.WHITE_10),
             border_radius=16,
             bgcolor=Colors.with_opacity(0.08, Colors.WHITE),
-            height=140,
+            height=160,
         )
 
     # ------------------------------------------------------------------
