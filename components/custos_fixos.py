@@ -68,7 +68,7 @@ class CustosFixosView(ft.Column):
         self._categoria = ft.Dropdown(
             label="Categoria",
             hint_text="Selecione...",
-            options=[ft.dropdown.Option(c["nome"]) for c in CATEGORIAS],
+            options=[ft.DropdownOption(c["nome"]) for c in CATEGORIAS],
             border_radius=10,
         )
 
@@ -76,16 +76,16 @@ class CustosFixosView(ft.Column):
             label="Método de Pagamento",
             hint_text="Selecione...",
             options=[
-                ft.dropdown.Option("Pix"),
-                ft.dropdown.Option("Débito"),
-                ft.dropdown.Option("Crédito"),
+                ft.DropdownOption("Pix"),
+                ft.DropdownOption("Débito"),
+                ft.DropdownOption("Crédito"),
             ],
             value="Pix",
             border_radius=10,
         )
 
         save_btn = ft.ElevatedButton(
-            text="Adicionar Custo Fixo",
+            "Adicionar Custo Fixo",
             icon=ft.Icons.ADD_CIRCLE_OUTLINE,
             style=BTN_PRIMARY,
             height=48,

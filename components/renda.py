@@ -57,7 +57,7 @@ class RendaView(ft.Column):
         )
 
         fixa_save = ft.ElevatedButton(
-            text="Salvar Renda Fixa",
+            "Salvar Renda Fixa",
             icon=ft.Icons.SAVE,
             style=BTN_SUCCESS,
             height=42,
@@ -130,17 +130,17 @@ class RendaView(ft.Column):
         self._var_cat = ft.Dropdown(
             label="Categoria",
             options=[
-                ft.dropdown.Option("Hora Extra"),
-                ft.dropdown.Option("PLR"),
-                ft.dropdown.Option("Freela"),
-                ft.dropdown.Option("Comissão"),
-                ft.dropdown.Option("Outros"),
+                ft.DropdownOption("Hora Extra"),
+                ft.DropdownOption("PLR"),
+                ft.DropdownOption("Freela"),
+                ft.DropdownOption("Comissão"),
+                ft.DropdownOption("Outros"),
             ],
             border_radius=10,
         )
 
         var_add = ft.ElevatedButton(
-            text="Adicionar Renda Variável",
+            "Adicionar Renda Variável",
             icon=ft.Icons.ADD_CIRCLE_OUTLINE,
             style=BTN_PRIMARY,
             height=42,

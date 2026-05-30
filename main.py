@@ -165,19 +165,19 @@ def main(page: ft.Page) -> None:
         label_behavior=ft.NavigationBarLabelBehavior.ALWAYS_HIDE,
         height=64,
         destinations=[
-            ft.NavigationDestination(
+            ft.NavigationBarDestination(
                 icon=ft.Icons.RECEIPT_LONG_OUTLINED,
                 selected_icon=ft.Icons.RECEIPT_LONG_ROUNDED,
             ),
-            ft.NavigationDestination(
+            ft.NavigationBarDestination(
                 icon=ft.Icons.ADD_CARD_OUTLINED,
                 selected_icon=ft.Icons.ADD_CARD_ROUNDED,
             ),
-            ft.NavigationDestination(
+            ft.NavigationBarDestination(
                 icon=ft.Icons.ACCOUNT_BALANCE_WALLET_OUTLINED,
                 selected_icon=ft.Icons.ACCOUNT_BALANCE_WALLET_ROUNDED,
             ),
-            ft.NavigationDestination(
+            ft.NavigationBarDestination(
                 icon=ft.Icons.DASHBOARD_OUTLINED,
                 selected_icon=ft.Icons.DASHBOARD_ROUNDED,
             ),
@@ -196,4 +196,4 @@ def main(page: ft.Page) -> None:
 # Execução
 # ---------------------------------------------------------------------------
 if __name__ == "__main__":
-    ft.app(target=main, port=8550, host="127.0.0.1")
+    ft.run(main, port=8550, host="127.0.0.1")

@@ -124,7 +124,7 @@ class RegistroCustoView(ft.Column):
         self._categoria = ft.Dropdown(
             label="Categoria",
             hint_text="Selecione...",
-            options=[ft.dropdown.Option(c["nome"]) for c in CATEGORIAS],
+            options=[ft.DropdownOption(c["nome"]) for c in CATEGORIAS],
             border_radius=10,
         )
 
@@ -133,12 +133,12 @@ class RegistroCustoView(ft.Column):
             label="Método de Pagamento",
             hint_text="Selecione...",
             options=[
-                ft.dropdown.Option("Pix"),
-                ft.dropdown.Option("Débito"),
-                ft.dropdown.Option("Crédito"),
+                ft.DropdownOption("Pix"),
+                ft.DropdownOption("Débito"),
+                ft.DropdownOption("Crédito"),
             ],
             value="Pix",
-            on_change=lambda _: self._toggle_credit(),
+            on_select=lambda _: self._toggle_credit(),
             border_radius=10,
         )
 
@@ -195,7 +195,7 @@ class RegistroCustoView(ft.Column):
 
         # --- Botão salvar ---
         save_btn = ft.ElevatedButton(
-            text="Salvar",
+            "Salvar",
             icon=ft.Icons.SAVE,
             style=BTN_PRIMARY,
             height=48,
