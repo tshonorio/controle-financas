@@ -282,7 +282,7 @@ class LanctosView(ft.Column):
                     alignment=ft.MainAxisAlignment.CENTER,
                     horizontal_alignment=ft.CrossAxisAlignment.CENTER,
                 ),
-                alignment=ft.alignment.center,
+                alignment=ft.Alignment.center,
                 expand=True,
                 padding=60,
             )

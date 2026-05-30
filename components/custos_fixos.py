@@ -109,8 +109,8 @@ class CustosFixosView(ft.Column):
             padding=12,
             border_radius=10,
             gradient=ft.LinearGradient(
-                begin=ft.alignment.center_left,
-                end=ft.alignment.center_right,
+                begin=ft.Alignment.center_left,
+                end=ft.Alignment.center_right,
                 colors=[ft.Colors.with_opacity(0.12, ft.Colors.PINK_500), ft.Colors.with_opacity(0.12, ft.Colors.PURPLE_500)],
             ),
             border=ft.Border.all(1, ft.Colors.with_opacity(0.2, ft.Colors.PINK_500)),

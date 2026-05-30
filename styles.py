@@ -22,20 +22,20 @@ class Colors:
     ACCENT_200: str = ft.Colors.PINK_200
 
     GRADIENT_BRAND = ft.LinearGradient(
-        begin=ft.alignment.top_left,
-        end=ft.alignment.bottom_right,
+        begin=ft.Alignment.top_left,
+        end=ft.Alignment.bottom_right,
         colors=[ft.Colors.PINK_500, ft.Colors.PURPLE_500, ft.Colors.DEEP_PURPLE_500],
     )
 
     GRADIENT_GOLD = ft.LinearGradient(
-        begin=ft.alignment.top_left,
-        end=ft.alignment.bottom_right,
+        begin=ft.Alignment.top_left,
+        end=ft.Alignment.bottom_right,
         colors=[ft.Colors.AMBER_400, ft.Colors.ORANGE_500],
     )
 
     GRADIENT_GREEN = ft.LinearGradient(
-        begin=ft.alignment.top_left,
-        end=ft.alignment.bottom_right,
+        begin=ft.Alignment.top_left,
+        end=ft.Alignment.bottom_right,
         colors=[ft.Colors.GREEN_500, ft.Colors.TEAL_500],
     )
 

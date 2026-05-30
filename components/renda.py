@@ -220,7 +220,7 @@ class RendaView(ft.Column):
             var_items.append(
                 ft.Container(
                     content=ft.Text("Nenhuma renda variável cadastrada", color=Colors.GREY_500, size=13),
-                    alignment=ft.alignment.center,
+                    alignment=ft.Alignment.center,
                     padding=20,
                 )
             )
