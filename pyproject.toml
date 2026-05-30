@@ -1,0 +1,20 @@
+[project]
+name = "controle-financas"
+version = "1.0.0"
+description = "Controle de Finanças"
+requires-python = ">=3.10"
+dependencies = [
+    "flet>=0.85.0",
+]
+
+[tool.flet.app.boot_screen]
+show = true
+message = "Preparando o aplicativo…"
+
+[tool.flet.app.startup_screen]
+show = true
+message = "Carregando…"
+
+[tool.flet.android]
+min_sdk_version = 21
+target_sdk_version = 34
