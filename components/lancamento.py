@@ -97,7 +97,7 @@ class LancamentoView(ft.Column):
                 alignment=ft.MainAxisAlignment.CENTER,
             ),
             on_click=lambda _: self._date_picker.pick_date(),
-            bgcolor=ft.Colors.SURFACE_VARIANT,
+            bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST,
             padding=12,
             border_radius=10,
         )
@@ -157,7 +157,7 @@ class LancamentoView(ft.Column):
                 alignment=ft.MainAxisAlignment.CENTER,
             ),
             on_click=lambda _: self._venc_picker.pick_date(),
-            bgcolor=ft.Colors.SURFACE_VARIANT,
+            bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST,
             padding=12,
             border_radius=10,
         )
@@ -171,7 +171,7 @@ class LancamentoView(ft.Column):
         self._preview_container = ft.Container(
             content=self._preview_text,
             bgcolor=ft.Colors.with_opacity(0.1, ft.Colors.INDIGO),
-            border=ft.border.all(
+            border=ft.Border.all(
                 1, ft.Colors.with_opacity(0.3, ft.Colors.INDIGO)
             ),
             border_radius=10,

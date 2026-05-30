@@ -113,7 +113,7 @@ class CustosFixosView(ft.Column):
                 end=ft.alignment.center_right,
                 colors=[ft.Colors.with_opacity(0.12, ft.Colors.PINK_500), ft.Colors.with_opacity(0.12, ft.Colors.PURPLE_500)],
             ),
-            border=ft.border.all(1, ft.Colors.with_opacity(0.2, ft.Colors.PINK_500)),
+            border=ft.Border.all(1, ft.Colors.with_opacity(0.2, ft.Colors.PINK_500)),
         )
 
         self.controls = [

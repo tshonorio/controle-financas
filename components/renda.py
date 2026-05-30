@@ -83,7 +83,7 @@ class RendaView(ft.Column):
             padding=16,
             border_radius=14,
             bgcolor=Colors.with_opacity(0.06, Colors.WHITE),
-            border=ft.border.all(1, Colors.WHITE_10),
+            border=ft.Border.all(1, Colors.WHITE_10),
         )
 
         # --- Renda Variável ---
@@ -122,7 +122,7 @@ class RendaView(ft.Column):
                 spacing=6,
             ),
             on_click=lambda _: self._var_date_picker.pick_date(),
-            bgcolor=ft.Colors.SURFACE_VARIANT,
+            bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST,
             padding=12,
             border_radius=10,
         )
@@ -173,7 +173,7 @@ class RendaView(ft.Column):
             padding=16,
             border_radius=14,
             bgcolor=Colors.with_opacity(0.06, Colors.WHITE),
-            border=ft.border.all(1, Colors.WHITE_10),
+            border=ft.Border.all(1, Colors.WHITE_10),
         )
 
         # --- Lista de rendas variáveis ---
@@ -212,7 +212,7 @@ class RendaView(ft.Column):
                     padding=10,
                     border_radius=10,
                     bgcolor=Colors.with_opacity(0.04, Colors.WHITE),
-                    border=ft.border.all(1, Colors.WHITE_10),
+                    border=ft.Border.all(1, Colors.WHITE_10),
                 )
             )
 

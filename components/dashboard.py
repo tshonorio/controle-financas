@@ -73,7 +73,7 @@ class _SummaryCard(ft.Container):
             spacing=4,
         )
         self.bgcolor = Colors.with_opacity(0.1, self._color)
-        self.border = ft.border.all(1, Colors.with_opacity(0.2, self._color))
+        self.border = ft.Border.all(1, Colors.with_opacity(0.2, self._color))
         self.border_radius = 14
         self.padding = 14
         self.expand = True
@@ -208,7 +208,7 @@ class DashboardView(ft.Column):
                 alignment=ft.MainAxisAlignment.START,
             ),
             padding=16,
-            border=ft.border.all(1, Colors.WHITE_10),
+            border=ft.Border.all(1, Colors.WHITE_10),
             border_radius=16,
             bgcolor=Colors.with_opacity(0.08, Colors.WHITE),
             height=160,

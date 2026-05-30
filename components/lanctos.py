@@ -175,11 +175,11 @@ class LanctosView(ft.Column):
                 padding=8,
                 border_radius=12,
                 bgcolor=(
-                    Colors.with_opacity(0.4, ft.Colors.SURFACE_VARIANT)
+                    Colors.with_opacity(0.4, ft.Colors.SURFACE_CONTAINER_HIGHEST)
                     if is_paid
-                    else ft.Colors.SURFACE_VARIANT
+                    else ft.Colors.SURFACE_CONTAINER_HIGHEST
                 ),
-                border=ft.border.all(border_width, border_color),
+                border=ft.Border.all(border_width, border_color),
                 opacity=opacity_override if opacity_override is not None else (0.6 if is_paid else 1.0),
             )
 
@@ -675,7 +675,7 @@ class LanctosView(ft.Column):
                             alignment=ft.MainAxisAlignment.CENTER,
                         ),
                         on_click=pick_date,
-                        bgcolor=ft.Colors.SURFACE_VARIANT,
+                        bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST,
                         padding=12,
                         border_radius=10,
                     ),

@@ -115,7 +115,7 @@ class RegistroCustoView(ft.Column):
                 alignment=ft.MainAxisAlignment.CENTER,
             ),
             on_click=lambda _: self._date_picker.pick_date(),
-            bgcolor=ft.Colors.SURFACE_VARIANT,
+            bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST,
             padding=12,
             border_radius=10,
         )
@@ -164,7 +164,7 @@ class RegistroCustoView(ft.Column):
                 alignment=ft.MainAxisAlignment.CENTER,
             ),
             on_click=lambda _: self._venc_picker.pick_date(),
-            bgcolor=ft.Colors.SURFACE_VARIANT,
+            bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST,
             padding=12,
             border_radius=10,
         )
@@ -175,7 +175,7 @@ class RegistroCustoView(ft.Column):
         self._preview_container = ft.Container(
             content=self._preview_text,
             bgcolor=ft.Colors.with_opacity(0.1, ft.Colors.INDIGO),
-            border=ft.border.all(1, ft.Colors.with_opacity(0.3, ft.Colors.INDIGO)),
+            border=ft.Border.all(1, ft.Colors.with_opacity(0.3, ft.Colors.INDIGO)),
             border_radius=10, padding=12, alignment=ft.alignment.center,
             visible=False,
         )
@@ -208,7 +208,7 @@ class RegistroCustoView(ft.Column):
             ft.Divider(height=5, color=ft.Colors.TRANSPARENT),
             ft.Container(
                 content=ft.Row([self._btn_fixo, self._btn_variavel], spacing=0),
-                border=ft.border.all(1, Colors.WHITE_10),
+                border=ft.Border.all(1, Colors.WHITE_10),
                 border_radius=10,
                 clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
             ),

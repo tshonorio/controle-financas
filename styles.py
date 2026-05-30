@@ -14,7 +14,7 @@ class Colors:
     """Constantes de cores do aplicativo — paleta Instagram."""
 
     SURFACE: str = ft.Colors.SURFACE
-    SURFACE_VARIANT: str = ft.Colors.SURFACE_VARIANT
+    SURFACE_VARIANT: str = ft.Colors.SURFACE_CONTAINER_HIGHEST
 
     ACCENT: str = ft.Colors.PINK
     ACCENT_600: str = ft.Colors.PINK_600
