@@ -130,6 +130,7 @@ class LanctosView(ft.Column):
                                         *([ft.Text("•", size=11, color=Colors.GREY_600), ft.Text(local, size=11, color=Colors.GREY_400)] if local else []),
                                     ],
                                     spacing=4,
+                                    wrap=True,
                                 ),
                             ],
                             spacing=2,

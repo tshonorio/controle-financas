@@ -34,8 +34,6 @@ def main(page: ft.Page) -> None:
         current_locale=ft.Locale(language_code="pt", country_code="BR"),
         supported_locales=[ft.Locale(language_code="pt", country_code="BR")],
     )
-    page.window_width = 390
-    page.window_height = 844
     page.window_resizable = True
     page.theme = ft.Theme(
         color_scheme_seed=ft.Colors.PINK,
@@ -188,7 +186,11 @@ def main(page: ft.Page) -> None:
     )
 
     # --- Renderização inicial ---
-    page.add(ft.Column([top_bar, content_container], spacing=0, expand=True))
+    page.add(
+        ft.SafeArea(
+            content=ft.Column([top_bar, content_container], spacing=0, expand=True),
+        )
+    )
     render_current_view()
 
 
