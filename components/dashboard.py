@@ -122,8 +122,8 @@ class DashboardView(ft.Column):
             padding=ft.padding.symmetric(horizontal=8, vertical=4),
             border_radius=10,
             gradient=ft.LinearGradient(
-                begin=ft.Alignment.center_left,
-                end=ft.Alignment.center_right,
+                begin=ft.Alignment.CENTER_LEFT,
+                end=ft.Alignment.CENTER_RIGHT,
                 colors=[ft.Colors.PINK_800, ft.Colors.PURPLE_800],
             ),
         )
@@ -151,7 +151,7 @@ class DashboardView(ft.Column):
                 horizontal_alignment=ft.CrossAxisAlignment.CENTER,
                 alignment=ft.MainAxisAlignment.CENTER,
             ),
-            alignment=ft.Alignment.center,
+            alignment=ft.Alignment.CENTER,
             padding=60,
             visible=False,
         )
@@ -196,7 +196,7 @@ class DashboardView(ft.Column):
                         ),
                         width=100,
                         height=100,
-                        alignment=ft.Alignment.center,
+                        alignment=ft.Alignment.CENTER,
                     ),
                     ft.Container(width=1, height=80, bgcolor=Colors.WHITE_10),
                     ft.Container(

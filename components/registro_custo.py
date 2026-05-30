@@ -176,7 +176,7 @@ class RegistroCustoView(ft.Column):
             content=self._preview_text,
             bgcolor=ft.Colors.with_opacity(0.1, ft.Colors.INDIGO),
             border=ft.Border.all(1, ft.Colors.with_opacity(0.3, ft.Colors.INDIGO)),
-            border_radius=10, padding=12, alignment=ft.Alignment.center,
+            border_radius=10, padding=12, alignment=ft.Alignment.CENTER,
             visible=False,
         )
         self._parcelamento_section = ft.Column(

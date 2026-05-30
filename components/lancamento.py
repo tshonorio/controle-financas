@@ -176,7 +176,7 @@ class LancamentoView(ft.Column):
             ),
             border_radius=10,
             padding=12,
-            alignment=ft.Alignment.center,
+            alignment=ft.Alignment.CENTER,
             visible=False,
         )
 
