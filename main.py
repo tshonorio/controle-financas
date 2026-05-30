@@ -76,13 +76,13 @@ def main(page: ft.Page) -> None:
         nonlocal _is_dark
         _is_dark = not _is_dark
         page.theme_mode = ft.ThemeMode.DARK if _is_dark else ft.ThemeMode.LIGHT
-        theme_btn.icon = ft.icons.DARK_MODE if _is_dark else ft.icons.LIGHT_MODE
+        theme_btn.icon = ft.Icons.DARK_MODE if _is_dark else ft.Icons.LIGHT_MODE
         theme_btn.update()
         page.update()
 
     theme_btn = ft.IconButton(
-        icon=ft.icons.DARK_MODE,
-        selected_icon=ft.icons.LIGHT_MODE,
+        icon=ft.Icons.DARK_MODE,
+        selected_icon=ft.Icons.LIGHT_MODE,
         icon_color=ft.Colors.PINK_300,
         on_click=_toggle_theme,
         tooltip="Alternar tema",
@@ -166,20 +166,20 @@ def main(page: ft.Page) -> None:
         height=64,
         destinations=[
             ft.NavigationDestination(
-                icon=ft.icons.RECEIPT_LONG_OUTLINED,
-                selected_icon=ft.icons.RECEIPT_LONG_ROUNDED,
+                icon=ft.Icons.RECEIPT_LONG_OUTLINED,
+                selected_icon=ft.Icons.RECEIPT_LONG_ROUNDED,
             ),
             ft.NavigationDestination(
-                icon=ft.icons.ADD_CARD_OUTLINED,
-                selected_icon=ft.icons.ADD_CARD_ROUNDED,
+                icon=ft.Icons.ADD_CARD_OUTLINED,
+                selected_icon=ft.Icons.ADD_CARD_ROUNDED,
             ),
             ft.NavigationDestination(
-                icon=ft.icons.ACCOUNT_BALANCE_WALLET_OUTLINED,
-                selected_icon=ft.icons.ACCOUNT_BALANCE_WALLET_ROUNDED,
+                icon=ft.Icons.ACCOUNT_BALANCE_WALLET_OUTLINED,
+                selected_icon=ft.Icons.ACCOUNT_BALANCE_WALLET_ROUNDED,
             ),
             ft.NavigationDestination(
-                icon=ft.icons.DASHBOARD_OUTLINED,
-                selected_icon=ft.icons.DASHBOARD_ROUNDED,
+                icon=ft.Icons.DASHBOARD_OUTLINED,
+                selected_icon=ft.Icons.DASHBOARD_ROUNDED,
             ),
         ],
         bgcolor=ft.Colors.SURFACE,

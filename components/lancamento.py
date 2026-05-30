@@ -91,7 +91,7 @@ class LancamentoView(ft.Column):
         date_btn = ft.Container(
             content=ft.Row(
                 [
-                    ft.Icon(ft.icons.CALENDAR_MONTH, color=Colors.ACCENT_300),
+                    ft.Icon(ft.Icons.CALENDAR_MONTH, color=Colors.ACCENT_300),
                     self._date_text,
                 ],
                 alignment=ft.MainAxisAlignment.CENTER,
@@ -151,7 +151,7 @@ class LancamentoView(ft.Column):
         venc_btn = ft.Container(
             content=ft.Row(
                 [
-                    ft.Icon(ft.icons.CALENDAR_MONTH, color=Colors.ACCENT_300),
+                    ft.Icon(ft.Icons.CALENDAR_MONTH, color=Colors.ACCENT_300),
                     self._venc_text,
                 ],
                 alignment=ft.MainAxisAlignment.CENTER,
@@ -227,7 +227,7 @@ class LancamentoView(ft.Column):
         # --- Botão salvar ---
         save_btn = ft.ElevatedButton(
             text="Salvar Lançamento",
-            icon=ft.icons.SAVE,
+            icon=ft.Icons.SAVE,
             style=BTN_PRIMARY,
             height=48,
             on_click=self._salvar,

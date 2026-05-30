@@ -86,7 +86,7 @@ class CustosFixosView(ft.Column):
 
         save_btn = ft.ElevatedButton(
             text="Adicionar Custo Fixo",
-            icon=ft.icons.ADD_CIRCLE_OUTLINE,
+            icon=ft.Icons.ADD_CIRCLE_OUTLINE,
             style=BTN_PRIMARY,
             height=48,
             on_click=self._salvar,
@@ -97,7 +97,7 @@ class CustosFixosView(ft.Column):
                 [
                     ft.Row(
                         [
-                            ft.Icon(ft.icons.INFO_OUTLINE, size=16, color=Colors.ACCENT_300),
+                            ft.Icon(ft.Icons.INFO_OUTLINE, size=16, color=Colors.ACCENT_300),
                             ft.Text("As parcelas geradas aparecem em Lançamentos.", size=12, color=Colors.GREY_400),
                         ],
                         spacing=6,

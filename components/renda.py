@@ -58,7 +58,7 @@ class RendaView(ft.Column):
 
         fixa_save = ft.ElevatedButton(
             text="Salvar Renda Fixa",
-            icon=ft.icons.SAVE,
+            icon=ft.Icons.SAVE,
             style=BTN_SUCCESS,
             height=42,
             on_click=self._salvar_fixa,
@@ -69,7 +69,7 @@ class RendaView(ft.Column):
                 [
                     ft.Row(
                         [
-                            ft.Icon(ft.icons.ATTACH_MONEY, color=Colors.GREEN_400, size=22),
+                            ft.Icon(ft.Icons.ATTACH_MONEY, color=Colors.GREEN_400, size=22),
                             ft.Text("Renda Fixa Mensal", size=16, weight=ft.FontWeight.BOLD),
                         ],
                         spacing=8,
@@ -115,7 +115,7 @@ class RendaView(ft.Column):
         var_data_btn = ft.Container(
             content=ft.Row(
                 [
-                    ft.Icon(ft.icons.CALENDAR_MONTH, color=Colors.ACCENT_300, size=18),
+                    ft.Icon(ft.Icons.CALENDAR_MONTH, color=Colors.ACCENT_300, size=18),
                     self._var_data,
                 ],
                 alignment=ft.MainAxisAlignment.CENTER,
@@ -141,7 +141,7 @@ class RendaView(ft.Column):
 
         var_add = ft.ElevatedButton(
             text="Adicionar Renda Variável",
-            icon=ft.icons.ADD_CIRCLE_OUTLINE,
+            icon=ft.Icons.ADD_CIRCLE_OUTLINE,
             style=BTN_PRIMARY,
             height=42,
             on_click=self._adicionar_variavel,
@@ -152,7 +152,7 @@ class RendaView(ft.Column):
                 [
                     ft.Row(
                         [
-                            ft.Icon(ft.icons.TRENDING_UP, color=Colors.ACCENT_300, size=22),
+                            ft.Icon(ft.Icons.TRENDING_UP, color=Colors.ACCENT_300, size=22),
                             ft.Text("Renda Variável", size=16, weight=ft.FontWeight.BOLD),
                         ],
                         spacing=8,
@@ -186,7 +186,7 @@ class RendaView(ft.Column):
                     content=ft.Row(
                         [
                             ft.Container(
-                                content=ft.Icon(ft.icons.TRENDING_UP, size=16, color=Colors.GREEN_400),
+                                content=ft.Icon(ft.Icons.TRENDING_UP, size=16, color=Colors.GREEN_400),
                                 bgcolor=Colors.with_opacity(0.15, Colors.GREEN),
                                 border_radius=8,
                                 padding=6,
@@ -201,7 +201,7 @@ class RendaView(ft.Column):
                             ),
                             ft.Text(format_real(rvalor), size=14, weight=ft.FontWeight.BOLD, color=Colors.GREEN_400),
                             ft.IconButton(
-                                icon=ft.icons.DELETE_OUTLINE,
+                                icon=ft.Icons.DELETE_OUTLINE,
                                 icon_size=18,
                                 icon_color=Colors.RED_300,
                                 on_click=lambda _, x=rid: self._excluir_variavel(x),

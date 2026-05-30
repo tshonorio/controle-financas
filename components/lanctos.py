@@ -87,9 +87,9 @@ class LanctosView(ft.Column):
                 content=ft.Row(
                     [
                         ft.IconButton(
-                            icon=ft.icons.CHECK_CIRCLE
+                            icon=ft.Icons.CHECK_CIRCLE
                             if is_paid
-                            else ft.icons.RADIO_BUTTON_UNCHECKED,
+                            else ft.Icons.RADIO_BUTTON_UNCHECKED,
                             icon_color=Colors.GREEN if is_paid else Colors.GREY_500,
                             on_click=lambda _, pid=p_id, ps=paga, d=desc, rid=c_id, cf=custo_fixo_id: self._confirm_toggle(
                                 pid, ps, d, rid, cf
@@ -142,9 +142,9 @@ class LanctosView(ft.Column):
                             color=Colors.GREEN_400 if is_paid else Colors.WHITE,
                         ),
                         ft.IconButton(
-                            icon=ft.icons.NOTIFICATIONS_ACTIVE
+                            icon=ft.Icons.NOTIFICATIONS_ACTIVE
                             if notificar_dias is not None
-                            else ft.icons.NOTIFICATIONS_NONE,
+                            else ft.Icons.NOTIFICATIONS_NONE,
                             icon_size=18,
                             icon_color=(
                                 Colors.ACCENT_300
@@ -161,7 +161,7 @@ class LanctosView(ft.Column):
                             ),
                         ),
                         ft.IconButton(
-                            icon=ft.icons.DELETE_OUTLINE,
+                            icon=ft.Icons.DELETE_OUTLINE,
                             icon_size=18,
                             icon_color=Colors.RED_300,
                             tooltip="Excluir",
@@ -272,7 +272,7 @@ class LanctosView(ft.Column):
             list_container = ft.Container(
                 content=ft.Column(
                     [
-                        ft.Icon(ft.icons.CHECK_CIRCLE, size=48, color=Colors.GREEN_400),
+                        ft.Icon(ft.Icons.CHECK_CIRCLE, size=48, color=Colors.GREEN_400),
                         ft.Text(
                             "Todas as contas estão pagas!",
                             color=Colors.GREY_500,
@@ -297,7 +297,7 @@ class LanctosView(ft.Column):
         hint = ft.Container(
             content=ft.Row(
                 [
-                    ft.Icon(ft.icons.TOUCH_APP, size=14, color=Colors.GREY_500),
+                    ft.Icon(ft.Icons.TOUCH_APP, size=14, color=Colors.GREY_500),
                     ft.Text(
                         "Segure e arraste para reordenar · pressione 2s para editar",
                         size=11,
@@ -374,7 +374,7 @@ class LanctosView(ft.Column):
         dlg = ft.AlertDialog(
             title=ft.Row(
                 [
-                    ft.Icon(ft.icons.CHECK_CIRCLE if not is_paid else ft.icons.UNDO, color=cor, size=20),
+                    ft.Icon(ft.Icons.CHECK_CIRCLE if not is_paid else ft.Icons.UNDO, color=cor, size=20),
                     ft.Text(titulo, size=16, weight=ft.FontWeight.BOLD),
                 ],
                 spacing=8,
@@ -444,7 +444,7 @@ class LanctosView(ft.Column):
         dlg = ft.AlertDialog(
             title=ft.Row(
                 [
-                    ft.Icon(ft.icons.REPEAT_ROUNDED, color=Colors.ACCENT_300, size=20),
+                    ft.Icon(ft.Icons.REPEAT_ROUNDED, color=Colors.ACCENT_300, size=20),
                     ft.Text("Renovar custo fixo?", size=16, weight=ft.FontWeight.BOLD),
                 ],
                 spacing=8,
@@ -515,7 +515,7 @@ class LanctosView(ft.Column):
         dlg = ft.AlertDialog(
             title=ft.Row(
                 [
-                    ft.Icon(ft.icons.NOTIFICATIONS_OUTLINED, color=Colors.ACCENT_300),
+                    ft.Icon(ft.Icons.NOTIFICATIONS_OUTLINED, color=Colors.ACCENT_300),
                     ft.Text("Lembrete", size=16, weight=ft.FontWeight.BOLD),
                 ],
                 spacing=8,
@@ -656,7 +656,7 @@ class LanctosView(ft.Column):
         dlg = ft.AlertDialog(
             title=ft.Row(
                 [
-                    ft.Icon(ft.icons.EDIT_OUTLINED, color=Colors.ACCENT_300),
+                    ft.Icon(ft.Icons.EDIT_OUTLINED, color=Colors.ACCENT_300),
                     ft.Text("Editar", size=16, weight=ft.FontWeight.BOLD),
                 ],
                 spacing=8,
@@ -669,7 +669,7 @@ class LanctosView(ft.Column):
                     ft.Container(
                         content=ft.Row(
                             [
-                                ft.Icon(ft.icons.CALENDAR_MONTH, color=Colors.ACCENT_300, size=18),
+                                ft.Icon(ft.Icons.CALENDAR_MONTH, color=Colors.ACCENT_300, size=18),
                                 venc_field,
                             ],
                             alignment=ft.MainAxisAlignment.CENTER,

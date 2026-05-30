@@ -69,13 +69,13 @@ class Colors:
 # Categorias
 # ---------------------------------------------------------------------------
 CATEGORIAS: list[dict[str, str]] = [
-    {"nome": "Alimentação", "cor": ft.Colors.GREEN, "icon": ft.icons.RESTAURANT},
-    {"nome": "Transporte", "cor": ft.Colors.BLUE, "icon": ft.icons.DIRECTIONS_CAR},
-    {"nome": "Lazer", "cor": ft.Colors.PURPLE, "icon": ft.icons.GAMEPAD},
-    {"nome": "Casa/Moradia", "cor": ft.Colors.AMBER, "icon": ft.icons.HOME},
-    {"nome": "Saúde", "cor": ft.Colors.RED, "icon": ft.icons.FAVORITE},
-    {"nome": "Educação", "cor": ft.Colors.CYAN, "icon": ft.icons.SCHOOL},
-    {"nome": "Outros", "cor": ft.Colors.GREY, "icon": ft.icons.CREDIT_CARD},
+    {"nome": "Alimentação", "cor": ft.Colors.GREEN, "icon": ft.Icons.RESTAURANT},
+    {"nome": "Transporte", "cor": ft.Colors.BLUE, "icon": ft.Icons.DIRECTIONS_CAR},
+    {"nome": "Lazer", "cor": ft.Colors.PURPLE, "icon": ft.Icons.GAMEPAD},
+    {"nome": "Casa/Moradia", "cor": ft.Colors.AMBER, "icon": ft.Icons.HOME},
+    {"nome": "Saúde", "cor": ft.Colors.RED, "icon": ft.Icons.FAVORITE},
+    {"nome": "Educação", "cor": ft.Colors.CYAN, "icon": ft.Icons.SCHOOL},
+    {"nome": "Outros", "cor": ft.Colors.GREY, "icon": ft.Icons.CREDIT_CARD},
 ]
 
 
@@ -84,7 +84,7 @@ def get_categoria_info(nome: str) -> dict[str, str]:
     for cat in CATEGORIAS:
         if cat["nome"].lower() == nome.lower():
             return cat
-    return {"nome": nome, "cor": ft.Colors.GREY, "icon": ft.icons.CREDIT_CARD}
+    return {"nome": nome, "cor": ft.Colors.GREY, "icon": ft.Icons.CREDIT_CARD}
 
 
 # ---------------------------------------------------------------------------

@@ -111,7 +111,7 @@ class RegistroCustoView(ft.Column):
         )
         self._date_btn = ft.Container(
             content=ft.Row(
-                [ft.Icon(ft.icons.CALENDAR_MONTH, color=Colors.ACCENT_300), self._date_text],
+                [ft.Icon(ft.Icons.CALENDAR_MONTH, color=Colors.ACCENT_300), self._date_text],
                 alignment=ft.MainAxisAlignment.CENTER,
             ),
             on_click=lambda _: self._date_picker.pick_date(),
@@ -160,7 +160,7 @@ class RegistroCustoView(ft.Column):
         )
         self._venc_btn = ft.Container(
             content=ft.Row(
-                [ft.Icon(ft.icons.CALENDAR_MONTH, color=Colors.ACCENT_300), self._venc_text],
+                [ft.Icon(ft.Icons.CALENDAR_MONTH, color=Colors.ACCENT_300), self._venc_text],
                 alignment=ft.MainAxisAlignment.CENTER,
             ),
             on_click=lambda _: self._venc_picker.pick_date(),
@@ -196,7 +196,7 @@ class RegistroCustoView(ft.Column):
         # --- Botão salvar ---
         save_btn = ft.ElevatedButton(
             text="Salvar",
-            icon=ft.icons.SAVE,
+            icon=ft.Icons.SAVE,
             style=BTN_PRIMARY,
             height=48,
             on_click=self._salvar,

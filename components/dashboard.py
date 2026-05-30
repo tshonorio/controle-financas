@@ -113,9 +113,9 @@ class DashboardView(ft.Column):
         nav_row = ft.Container(
             content=ft.Row(
                 [
-                    ft.IconButton(icon=ft.icons.KEYBOARD_ARROW_LEFT_ROUNDED, on_click=lambda _: self._navegar(-1)),
+                    ft.IconButton(icon=ft.Icons.KEYBOARD_ARROW_LEFT_ROUNDED, on_click=lambda _: self._navegar(-1)),
                     self._label,
-                    ft.IconButton(icon=ft.icons.KEYBOARD_ARROW_RIGHT_ROUNDED, on_click=lambda _: self._navegar(1)),
+                    ft.IconButton(icon=ft.Icons.KEYBOARD_ARROW_RIGHT_ROUNDED, on_click=lambda _: self._navegar(1)),
                 ],
                 alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
             ),
@@ -129,9 +129,9 @@ class DashboardView(ft.Column):
         )
 
         # --- Cards de resumo ---
-        self._card_total = _SummaryCard(ft.icons.ATTACH_MONEY, "Custo Total", Colors.WHITE)
-        self._card_fixo = _SummaryCard(ft.icons.REPEAT, "C. Fixos", ft.Colors.PINK_400)
-        self._card_var = _SummaryCard(ft.icons.SHOPPING_CART, "C. Variáveis", ft.Colors.PURPLE_400)
+        self._card_total = _SummaryCard(ft.Icons.ATTACH_MONEY, "Custo Total", Colors.WHITE)
+        self._card_fixo = _SummaryCard(ft.Icons.REPEAT, "C. Fixos", ft.Colors.PINK_400)
+        self._card_var = _SummaryCard(ft.Icons.SHOPPING_CART, "C. Variáveis", ft.Colors.PURPLE_400)
 
         cards_row = ft.Row(
             [self._card_total, self._card_fixo, self._card_var],
@@ -145,7 +145,7 @@ class DashboardView(ft.Column):
         self._empty_state = ft.Container(
             content=ft.Column(
                 [
-                    ft.Icon(ft.icons.INSERT_CHART_OUTLINED, size=56, color=Colors.GREY_600),
+                    ft.Icon(ft.Icons.INSERT_CHART_OUTLINED, size=56, color=Colors.GREY_600),
                     ft.Text("Nenhum dado encontrado para este mês", size=14, color=Colors.GREY_500),
                 ],
                 horizontal_alignment=ft.CrossAxisAlignment.CENTER,
