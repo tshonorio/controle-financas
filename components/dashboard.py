@@ -119,7 +119,7 @@ class DashboardView(ft.Column):
                 ],
                 alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
             ),
-            padding=ft.padding.symmetric(horizontal=8, vertical=4),
+            padding=ft.Padding.symmetric(horizontal=8, vertical=4),
             border_radius=10,
             gradient=ft.LinearGradient(
                 begin=ft.Alignment.CENTER_LEFT,
@@ -202,7 +202,7 @@ class DashboardView(ft.Column):
                     ft.Container(
                         content=_build_legend(por_cat),
                         expand=True,
-                        padding=ft.padding.only(left=12),
+                        padding=ft.Padding.only(left=12),
                     ),
                 ],
                 alignment=ft.MainAxisAlignment.START,

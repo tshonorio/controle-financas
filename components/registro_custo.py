@@ -53,16 +53,16 @@ class RegistroCustoView(ft.Column):
         # --- Seletor de tipo (Fixo / Variável) ---
         self._btn_fixo = ft.Container(
             content=ft.Text("Fixo", size=14, weight=ft.FontWeight.BOLD, text_align=ft.TextAlign.CENTER),
-            padding=ft.padding.symmetric(vertical=10),
-            border_radius=ft.border_radius.only(top_left=10, bottom_left=10),
+            padding=ft.Padding.symmetric(vertical=10),
+            border_radius=ft.BorderRadius.only(top_left=10, bottom_left=10),
             bgcolor=Colors.with_opacity(0.1, Colors.WHITE),
             expand=True,
             on_click=lambda _: self._set_tipo("fixo"),
         )
         self._btn_variavel = ft.Container(
             content=ft.Text("Variável", size=14, weight=ft.FontWeight.BOLD, text_align=ft.TextAlign.CENTER),
-            padding=ft.padding.symmetric(vertical=10),
-            border_radius=ft.border_radius.only(top_right=10, bottom_right=10),
+            padding=ft.Padding.symmetric(vertical=10),
+            border_radius=ft.BorderRadius.only(top_right=10, bottom_right=10),
             bgcolor=ft.Colors.PINK_600,
             expand=True,
             on_click=lambda _: self._set_tipo("variavel"),

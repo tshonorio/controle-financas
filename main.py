@@ -97,7 +97,7 @@ def main(page: ft.Page) -> None:
             alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
             vertical_alignment=ft.CrossAxisAlignment.CENTER,
         ),
-        padding=ft.padding.symmetric(horizontal=16, vertical=8),
+        padding=ft.Padding.symmetric(horizontal=16, vertical=8),
         border=ft.Border.only(bottom=ft.BorderSide(0.5, ft.Colors.with_opacity(0.1, ft.Colors.WHITE))),
     )
 
